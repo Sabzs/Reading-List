@@ -1,9 +1,13 @@
 import React from 'react'
-import "./styles/app.css";
+import BookContextProvider from './context/BookContext';
+import "./styles/App.css";
 
 function App() {
   return (
     <div className="App">
+      <BookContextProvider>
+
+      </BookContextProvider>
 
     </div>
   );
