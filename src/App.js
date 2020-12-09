@@ -6,13 +6,16 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div className="App">
-      <BookContextProvider>
-        <Navbar />
-        <BookList />
-      </BookContextProvider>
+    <>
+      <BookContextProvider className="bookContext">
 
-    </div>
+        <div className="appContainer" >
+          <Navbar />
+          <BookList />
+        </div>
+
+      </BookContextProvider>
+    </>
   );
 }
 

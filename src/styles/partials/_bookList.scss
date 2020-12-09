@@ -1,0 +1,36 @@
+.bookList {
+  display: flex;
+  width: 90%;
+  // background-color: $p-dark-yellow;
+  // background-color: $primary-dark-lime;
+  // border: 1px dashed black;
+  height: auto;
+
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px -1px rgba(82, 94, 86, 100%);
+  background: linear-gradient(
+    rgba($primary-dark-lime, 0.8),
+    rgba($primary-dark-lime, 0.8)
+  );
+
+  &__listContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    // border: 1px solid crimson;
+  }
+  &__list-Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 2px dotted green;
+    width: 25%;
+    height: 15vh;
+    margin: 0 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 1px 1px rgba(82, 94, 86, 100%);
+    background-color: $primary-yellow;
+  }
+}
