@@ -91,9 +91,16 @@ body {
   padding: 2rem 0;
   width: 70%;
   background-color: #fffde7;
+  border-radius: 00.625rem;
 }
 
 .navBar__header {
   margin: 0.625rem 0;
+  font-weight: bold;
+}
+
+.navBar__bookCount span {
+  color: #ff77a9;
+  font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */
