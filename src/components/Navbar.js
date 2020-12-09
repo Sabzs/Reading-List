@@ -6,9 +6,12 @@ const Navbar = () => {
 
 
   return (
-    <div>
-      <h1>My Reading List</h1>
-      <h4>currently have {books.length} to go through... </h4>
+    <div className="navBar">
+      <div className="navBar__innerContainer" >
+        <h1 className="navBar__header" >My Reading List</h1>
+        <h4 className="navBar__bookCount" >Currently have {books.length} books to go through... </h4>
+      </div>
+
     </div>
   )
 }
