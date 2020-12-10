@@ -1,4 +1,5 @@
 import React from 'react'
+import BookForm from './components/BookForm';
 import BookList from './components/BookList';
 import Navbar from './components/Navbar';
 import BookContextProvider from './context/BookContext';
@@ -12,6 +13,7 @@ function App() {
         <div className="appContainer" >
           <Navbar />
           <BookList />
+          <BookForm />
         </div>
 
       </BookContextProvider>
