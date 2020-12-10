@@ -17,8 +17,8 @@ const BookList = () => {
     </div>
 
   ) : (
-      <div className="bookList__emptyList" >
-        <h4 className="bookList__emptyList-info" >you do not have any more books to read...!! </h4>
+      <div className="emptyList" >
+        <h3 className="emptyList-info" > <span>Hooray...!!</span> your list is empty, please add some more books. </h3>
       </div>
     )
 }

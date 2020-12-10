@@ -7,15 +7,13 @@ const BookDetails = ({ book }) => {
 
 
   return (
-    // <div className="bookList__bookDetails" >
-    <li className="bookList__list-Details" >
+    <li className="bookList__list-Details" onClick={() => { removeBook(book.id) }}>
       {/* <div className="bookList__title-AuthorDiv" > */}
       <h2 className="bookList__title" >{book.title}</h2>
       <h4 className="bookList__author" >{book.author}</h4>
       {/* </div> */}
 
     </li>
-    // </div>
   )
 }
 
