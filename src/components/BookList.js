@@ -18,7 +18,9 @@ const BookList = () => {
 
   ) : (
       <div className="emptyList" >
-        <h3 className="emptyList-info" > <span>Hooray...!!</span> your list is empty, please add some more books. </h3>
+        <div className="emptyList__infoDiv"  >
+          <h3 className="emptyList__info" > <span>Hooray...!!</span> your list is empty, please add some more books. </h3>
+        </div>
       </div>
     )
 }

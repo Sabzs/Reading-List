@@ -40,10 +40,15 @@
     }
   }
   &__title {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
   }
   &__author {
-    font-size: 1rem;
+    // font-size: 1rem;
+    font-size: calc(0.625rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
+
     margin: 0.5rem 0;
   }
 }
@@ -53,38 +58,48 @@
 .emptyList {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 90%;
-  height: auto;
-
+  // height: auto;
+  height: 15vh;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 1px -1px rgba(82, 94, 86, 100%);
   background: linear-gradient(
     rgba($primary-dark-lime, 0.8),
     rgba($primary-dark-lime, 0.8)
   );
-}
-.emptyList-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
-  height: 15vh;
-  margin: 2.5rem 0;
-  border-radius: 0.3rem;
-  box-shadow: 1px 1px 1px 1px rgba(82, 94, 86, 100%);
-  background-color: $primary-green;
 
+  &__infoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 10vh;
+    margin: 2.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 1px -1px rgba(82, 94, 86, 100%);
+    background-color: $primary-green;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $primary-yellow;
+    }
+  }
   &__info {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  &:hover {
-    cursor: pointer;
-    background-color: $primary-yellow;
-  }
-  span {
-    color: $p-pink-light;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-size: calc(1.35rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
+
+    span {
+      color: $p-pink-light;
+      font-weight: bold;
+      font-size: calc(2rem + ((1vw - 7.68px) * 0.6944));
+      min-height: 0vw;
+      margin-bottom: 0.5rem;
+    }
   }
 }
