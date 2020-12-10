@@ -1,0 +1,49 @@
+.bookForm {
+  display: flex;
+  justify-content: center;
+  // flex-direction: column;
+  width: 50%;
+  margin: 1rem 0;
+
+  &__title-input,
+  &__author-input {
+    display: flex;
+    font-size: 0.725rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #f0f7e8;
+    padding-left: 0.625rem;
+    margin-right: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f0f4c3;
+      border: 1px solid $p-pink-light;
+    }
+    &:focus {
+      outline: none;
+      cursor: none;
+    }
+  }
+  &__submit-input {
+    background-color: #dcedc8;
+    color: $p-pink-light;
+    font-weight: bold;
+    border: none;
+    width: 5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #b8cc00;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f0f4c3;
+      border: 2px solid #eeff41;
+      color: #263238;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

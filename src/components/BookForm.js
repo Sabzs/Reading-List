@@ -18,21 +18,23 @@ const BookForm = () => {
   }
 
 
-
   return (
     <form className="bookForm" onSubmit={handleSubmit}>
-      <input type="text"
-        placeholder="book title"
+      <input className="bookForm__title-input"
+        type="text"
+        placeholder="book title..."
         value={title}
         onChange={(e) => { setTitle(e.target.value) }}
         required
       />
-      <input type="text"
-        placeholder="book author"
+      <input className="bookForm__author-input"
+        type="text"
+        placeholder="book author..."
         value={author}
         onChange={(e) => { setAuthor(e.target.value) }}
       />
-      <input type="submit" value="Add Book" />
+      <input className="bookForm__submit-input"
+        type="submit" value="Submit" />
 
     </form>
   )
