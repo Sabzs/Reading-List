@@ -1,0 +1,663 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p,
+a,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 0;
+  padding: 0 0 0 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Linotype";
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  background: #cccab5;
+}
+
+@font-face {
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Demi.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linotype";
+  src: url("../assets/fonts/Linotype-AvenirNextLTPro-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.appContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 1.25rem auto;
+}
+
+.navBar__innerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: #fffde7;
+  border-radius: 00.625rem;
+}
+
+.navBar__header {
+  margin: 0.625rem 0;
+  font-weight: bold;
+}
+
+.navBar__bookCount span {
+  color: #ff77a9;
+  font-weight: bold;
+}
+
+@media (min-width: 400px) {
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+  }
+  .home__addbook-link-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 6rem;
+    height: 2.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #ffc0cb;
+  }
+  .home__addbook-link-btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #263238;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .home__addbook-link-btn:hover {
+    background-color: #f08080;
+  }
+}
+
+@media (min-width: 400px) {
+  .bookList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 1px 1px 1px -1px #525e56;
+            box-shadow: 1px 1px 1px -1px #525e56;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 200, 181, 0.8)), to(rgba(198, 200, 181, 0.8)));
+    background: linear-gradient(rgba(198, 200, 181, 0.8), rgba(198, 200, 181, 0.8));
+  }
+  .bookList__booklist-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 1px 1px 1px 1px #525e56;
+            box-shadow: 1px 1px 1px 1px #525e56;
+    background-color: #f1f8e9;
+    border: 1px solid cyan;
+  }
+  .bookList__booklist-wrapper:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .bookList__booklist-wrapper:hover {
+    cursor: pointer;
+    background-color: #fffde7;
+  }
+  .bookList__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 70%;
+    padding-top: 0.3rem;
+  }
+  .bookList__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+  }
+  .bookList__author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    font-size: calc(0.825rem + ((1vw - 7.68px) * 0.6944));
+  }
+  .bookList__edit-delete-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+  }
+  .bookList__edit-btn, .bookList__delete-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 2.5rem;
+    height: 1.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: calc(0.825rem + ((1vw - 7.68px) * 0.6944));
+    font-weight: bold;
+  }
+  .bookList__edit-btn:not(:last-child), .bookList__delete-btn:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .bookList__edit-btn {
+    background-color: yellowgreen;
+  }
+  .bookList__edit-btn a {
+    color: #263238;
+  }
+  .bookList__delete-btn {
+    background-color: #f08080;
+    color: #263238;
+  }
+}
+
+@media (min-width: 400px) {
+  .emptyList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 15vh;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 1px 1px 1px -1px #525e56;
+            box-shadow: 1px 1px 1px -1px #525e56;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 200, 181, 0.8)), to(rgba(198, 200, 181, 0.8)));
+    background: linear-gradient(rgba(198, 200, 181, 0.8), rgba(198, 200, 181, 0.8));
+  }
+  .emptyList__infoDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    height: 10vh;
+    margin: 2.5rem 0;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 1px 1px 1px -1px #525e56;
+            box-shadow: 1px 1px 1px -1px #525e56;
+    background-color: #f1f8e9;
+  }
+  .emptyList__infoDiv:hover {
+    cursor: pointer;
+    background-color: #fffde7;
+  }
+  .emptyList__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
+  }
+  .emptyList__info span {
+    color: #ff77a9;
+    font-weight: bold;
+    font-size: calc(1.5rem + ((1vw - 7.68px) * 0.6944));
+    min-height: 0vw;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .addBook {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .addBook__header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0.5rem;
+    width: 100%;
+  }
+  .addBook__header-wrapper h3 {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    font-weight: bold;
+  }
+  .addBook__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+    padding: 0 1rem;
+  }
+  .addBook__title-author-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .addBook__title-input, .addBook__author-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.725rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #f0f7e8;
+    padding-left: 0.625rem;
+  }
+  .addBook__title-input:not(:last-child), .addBook__author-input:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  .addBook__title-input:hover, .addBook__author-input:hover {
+    cursor: pointer;
+    background-color: #f0f4c3;
+    border: 1px solid #ff77a9;
+  }
+  .addBook__title-input:focus, .addBook__author-input:focus {
+    outline: none;
+  }
+  .addBook__submit-cancle-btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .addBook__submit-btn, .addBook__cancel-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: bold;
+    border: none;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #b8cc00;
+  }
+  .addBook__submit-btn {
+    background-color: #ffc0cb;
+  }
+  .addBook__submit-btn:hover {
+    cursor: pointer;
+    background-color: #f08080;
+    color: #263238;
+  }
+  .addBook__submit-btn:focus {
+    outline: none;
+  }
+  .addBook__cancel-btn {
+    background-color: #dc143c;
+  }
+  .addBook__cancel-btn:hover {
+    background-color: #fff;
+  }
+  .addBook__cancel-btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+  .addBook__cancel-btn a:hover {
+    color: #dc143c;
+  }
+}
+
+@media (min-width: 400px) {
+  .editBook {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .editBook__header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0.5rem;
+    width: 100%;
+  }
+  .editBook__header-wrapper h3 {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    font-weight: bold;
+  }
+  .editBook__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+    padding: 0 1rem;
+  }
+  .editBook__title-author-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .editBook__title-input, .editBook__author-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.725rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #f0f7e8;
+    padding-left: 0.625rem;
+  }
+  .editBook__title-input:not(:last-child), .editBook__author-input:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  .editBook__title-input:hover, .editBook__author-input:hover {
+    cursor: pointer;
+    background-color: #f0f4c3;
+    border: 1px solid #ff77a9;
+  }
+  .editBook__title-input:focus, .editBook__author-input:focus {
+    outline: none;
+  }
+  .editBook__submit-cancle-btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .editBook__edit-btn, .editBook__cancel-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: bold;
+    border: none;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #b8cc00;
+  }
+  .editBook__edit-btn {
+    background-color: #ffc0cb;
+  }
+  .editBook__edit-btn:hover {
+    cursor: pointer;
+    background-color: #f08080;
+    color: #263238;
+  }
+  .editBook__edit-btn:focus {
+    outline: none;
+  }
+  .editBook__cancel-btn {
+    background-color: #dc143c;
+  }
+  .editBook__cancel-btn:hover {
+    background-color: #fff;
+  }
+  .editBook__cancel-btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+  .editBook__cancel-btn a:hover {
+    color: #dc143c;
+  }
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,45 @@
+@import "./global-variables";
+
+// breakpoints //
+@mixin small {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+@mixin large {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+@mixin xlarge {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+@mixin xxlarge {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
+
+//other Breakpoints
+@mixin medium-small {
+  @media (min-width: $mdsm) {
+    @content;
+  }
+}
+@mixin nav-small {
+  @media (max-width: $nav-sm) {
+    @content;
+  }
+}
+@mixin nav-sm-mdlarge {
+  @media (max-width: $nav-lg) {
+    @content;
+  }
+}
