@@ -28,8 +28,13 @@
 }
 
 //other Breakpoints
-@mixin medium-small {
-  @media (min-width: $mdsm) {
+@mixin small-medium {
+  @media (min-width: $sm-md) {
+    @content;
+  }
+}
+@mixin medium-lg {
+  @media (min-width: $md-lg) {
     @content;
   }
 }
