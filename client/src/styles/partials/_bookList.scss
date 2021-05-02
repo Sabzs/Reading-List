@@ -92,6 +92,11 @@
       color: #263238;
       font-size: calc(0.725rem + ((1vw - 7.68px) * 0.6944));
       font-weight: 550;
+      &:hover {
+        cursor: pointer;
+        background-color: #ffc0cb;
+        border: 0.5px solid #f08080;
+      }
     }
   }
   @include small-medium {
@@ -119,17 +124,29 @@
       height: 1.4rem;
     }
   }
+  @include large {
+    &__booklist-wrapper {
+      width: 11rem;
+      height: 11.5rem;
+    }
+  }
   @include xlarge {
     &__title {
-      font-size: calc(0.7375rem + ((1vw - 7.68px) * 0.6944));
+      font-size: calc(0.6375rem + ((1vw - 7.68px) * 0.6944));
     }
     &__author {
-      font-size: calc(0.625rem + ((1vw - 7.68px) * 0.6944));
+      font-size: calc(0.525rem + ((1vw - 7.68px) * 0.6944));
     }
     &__delete-btn {
-      font-size: calc(0.525rem + ((1vw - 7.68px) * 0.6944));
-      width: 3.1rem;
-      height: 1.4rem;
+      font-size: calc(0.325rem + ((1vw - 7.68px) * 0.6944));
+      width: 3.5rem;
+      height: 1.7rem;
+    }
+  }
+  @include xxlarge {
+    &__booklist-wrapper {
+      width: 12.5rem;
+      height: 13rem;
     }
   }
 }
