@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const colors = require("colors");
-const morgan = require("morgan");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
