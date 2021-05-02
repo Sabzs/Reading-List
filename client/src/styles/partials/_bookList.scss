@@ -22,22 +22,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 8rem;
+      width: 8.5rem;
       height: 8rem;
-      margin-bottom: 1rem;
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
+      margin: 0.5rem;
+      padding: 0 0.3rem;
       border-radius: 0.3rem;
       box-shadow: 1px 1px 1px 1px rgba(82, 94, 86, 100%);
       background-color: $primary-green;
+      border: 0.5px solid #00ffff;
       &:hover {
         cursor: pointer;
         background-color: $primary-yellow;
-        // text-decoration: line-through;
       }
-
-      border: 1px solid cyan;
     }
     &__list {
       display: flex;
@@ -51,8 +47,11 @@
     &__title {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
-      font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+      color: #263238d5;
+      font-size: calc(0.8375rem + ((1vw - 7.68px) * 0.6944));
+      font-weight: 550;
     }
     &__author {
       display: flex;
@@ -66,7 +65,7 @@
       align-items: center;
       width: 100%;
       margin-top: 1rem;
-      padding: 0 0.5rem;
+      // padding: 0 0.5rem;
     }
     &__edit-btn,
     &__delete-btn {
@@ -80,10 +79,9 @@
       &:not(:last-child) {
         margin-right: 0.5rem;
       }
-      font-size: calc(0.825rem + ((1vw - 7.68px) * 0.6944));
-      font-weight: bold;
     }
     &__edit-btn {
+      display: none;
       background-color: yellowgreen;
       a {
         color: #263238;
@@ -92,11 +90,55 @@
     &__delete-btn {
       background-color: #f08080;
       color: #263238;
+      font-size: calc(0.725rem + ((1vw - 7.68px) * 0.6944));
+      font-weight: 550;
+    }
+  }
+  @include small-medium {
+    &__booklist-wrapper {
+      width: 10rem;
+      height: 9rem;
+    }
+  }
+  @include medium {
+    margin-top: 2rem;
+    padding: 0 3rem;
+    &__delete-btn {
+      font-size: calc(0.625rem + ((1vw - 7.68px) * 0.6944));
+      width: 2.7rem;
+      height: 1.3rem;
+    }
+  }
+  @include medium-lg {
+    &__booklist-wrapper {
+      width: 10.5rem;
+      height: 10.5rem;
+    }
+    &__delete-btn {
+      width: 2.9rem;
+      height: 1.4rem;
+    }
+  }
+  @include xlarge {
+    &__title {
+      font-size: calc(0.7375rem + ((1vw - 7.68px) * 0.6944));
+    }
+    &__author {
+      font-size: calc(0.625rem + ((1vw - 7.68px) * 0.6944));
+    }
+    &__delete-btn {
+      font-size: calc(0.525rem + ((1vw - 7.68px) * 0.6944));
+      width: 3.1rem;
+      height: 1.4rem;
     }
   }
 }
 
-//when no books in the list, this div will display===//
+//
+*
+//when no books in the list, this div element will display===//
+*
+//
 .emptyList {
   @include small {
     display: flex;

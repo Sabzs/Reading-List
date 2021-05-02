@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BookContext } from '../context/BookContext';
 
 const BookList = () => {
-  const { books, deleteBook } = useContext(BookContext);
+  const { books, getBooks, deleteBook } = useContext(BookContext);
+
+  useEffect(() => {
+    getBooks();
+    //eslint-disable-next-line 
+  }, [])
 
   return books.length ? (
     <div className="bookList" >
