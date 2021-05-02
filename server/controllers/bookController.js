@@ -1,11 +1,11 @@
 const { Books } = require("../models");
 
-//Post new Item/==//
-const addBook = async ({ body }, res, next) => {
+// Post new Item//==//
+const addBook = async (req, res, next) => {
   try {
-    const { title, author } = body;
-    const newBook = await Books.create({ title, author });
-    return res.status(201).json({ newBook });
+    const { title, author } = req.body;
+    const newbook = await Books.create(req.body);
+    return res.status(201).json({ newbook });
   } catch (err) {
     console.log(err)
     return next(new Error(err));
@@ -28,13 +28,13 @@ const editBook = async ({ body, params }, res, next) => {
     if (!book) {
       return res.status(400).json({ error: "Book Id not found" });
     }
-    const editedBook = await Books.update({
+    const updatedbook = await Books.update({
       title: body.title,
       author: body.author
     },
       { where: { id: book.id } }
     )
-    return res.status(200).json({ editedBook, message: "Book Successfully updated!" })
+    return res.status(200).json({ updatedbook, message: "Book Successfully updated!" })
   } catch (err) {
     console.log(err);
     return next(new Error(err));
