@@ -4,6 +4,12 @@ import axios from 'axios';
 // import { useParams } from 'react-router';
 
 
+const API_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://kidscycle.herokuapp.com'
+    : 'http://localhost:8080';
+
+
 //initial state
 const initialState = {
   books: [],
@@ -22,7 +28,7 @@ const BookContextProvider = (props) => {
   //==Actions==//
   const getBooks = async () => {
     try {
-      const res = await axios.get("/api/books/getbooks");
+      const res = await axios.get(`${API_URL}/api/books/getbooks`);
       console.log(res.data)
       dispatch({
         type: "GET_BOOKS",
@@ -40,7 +46,7 @@ const BookContextProvider = (props) => {
   const addBook = async (book) => {
     const config = { headers: { 'Content-Type': 'application/json' } };
     try {
-      const res = await axios.post("/api/books/newbook", book, config);
+      const res = await axios.post(`${API_URL}/api/books/newbook`, book, config);
       console.log(res.data.newbook)
       dispatch({
         type: "ADD_BOOK",
@@ -74,7 +80,7 @@ const BookContextProvider = (props) => {
 
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`/api/books/deleteBook/${id}`)
+      await axios.delete(`${API_URL}/api/books/deleteBook/${id}`)
       dispatch({
         type: "DELETE_BOOK",
         payload: id
