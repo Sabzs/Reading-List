@@ -1,0 +1,37 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "start": "npm start --prefix server",
+    "server": "nodemon index --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "setup": "npm i && cd client && npm i && cd ../server && npm i",
+    "migrate:undo": "cd server/&& sequelize db:migrate:undo && sequelize db:migrate",
+    "migrate:all": "cd server/&& sequelize db:migrate:undo:all && sequelize db:migrate",
+    "migrate": "cd server/&& sequelize db:migrate",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabzs/Reading-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabzs/Reading-List/issues"
+  },
+  "homepage": "https://github.com/Sabzs/Reading-List#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}
