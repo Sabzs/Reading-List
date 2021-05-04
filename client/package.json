@@ -1,5 +1,5 @@
 {
-  "proxy": "https://reading-list.herokuaoo.com:8080",
+  "proxy": "https://books-2read.herokuapp.com:8080",
   "name": "client",
   "version": "0.1.0",
   "private": true,
