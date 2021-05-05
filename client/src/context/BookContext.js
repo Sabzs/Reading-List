@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const API_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://kidscycle.herokuapp.com'
+    ? 'https://books-2read.herokuapp.com'
     : 'http://localhost:8080';
 
 
